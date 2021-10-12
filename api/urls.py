@@ -7,6 +7,7 @@ router.register('student',views.StudentViewset,basename='studentapi')
 
 
 urlpatterns = [
-    path('',include(router.urls)),
+    # path('',include(router.urls)),
+    path('',views.StudentViewset.as_view(),name='Student api'),
     path('auth/',include('rest_framework.urls')),   ## Showing Login Logout button in navbar
 ]
